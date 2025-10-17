@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>React Welcome Component</title>
+</head>
+<body>
+  <h3>Aim:</h3>
+  <p>Create a React component using props to display “Welcome, [Name]”.</p>
+  <h3>Procedure:</h3>
+  <ol>
+    <li>Include React, ReactDOM, and Babel.</li>
+    <li>Create a functional component using props.</li>
+    <li>Render it with different names.</li>
+  </ol>
+  <div id="root"></div>
+  <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script type="text/babel">
+    function Welcome({name}){return <h2>Welcome, {name}!</h2>;}
+    function App(){return(<div><Welcome name="Deepak"/><Welcome name="Aditi"/></div>);}
+    ReactDOM.createRoot(document.getElementById('root')).render(<App/>);
+  </script>
+</body>
+</html>
